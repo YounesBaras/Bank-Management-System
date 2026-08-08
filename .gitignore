@@ -1,0 +1,10 @@
+Debug/
+Release/
+x64/
+x86/
+build/
+.vs/
+*.user
+*.suo
+*.exe
+0
