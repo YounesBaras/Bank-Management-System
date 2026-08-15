@@ -2,8 +2,8 @@
 
 #include <iostream>
 #include "clsScreen.h"
-#include "clsBankClient.h"
-#include "clsInputValidate.h"
+#include "Core/clsBankClient.h"
+#include "../Utils/clsInputValidate.h"
 
 class clsDepositScreen : protected clsScreen
 {

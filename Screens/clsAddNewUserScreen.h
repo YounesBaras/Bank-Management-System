@@ -2,8 +2,8 @@
 
 #include <iostream>
 #include "clsScreen.h"
-#include "clsUser.h"
-#include "clsInputValidate.h"
+#include "Core/clsUser.h"
+#include "../Utils/clsInputValidate.h"
 #include <iomanip>
 
 class clsAddNewUserScreen : protected clsScreen

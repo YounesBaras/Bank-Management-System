@@ -1,13 +1,13 @@
 #pragma once
 
 #include <iostream>
-#include "clsBankClient.h"
+#include "Core/clsBankClient.h"
+#include "../Utils/clsInputValidate.h"
 #include "clsScreen.h"
-#include "clsInputValidate.h"
 
 using namespace std;
 
-class clsDeleteClientScreen : protected clsScreen
+class clsFindClientScreen : protected clsScreen
 {
     static void _printClientCard(clsBankClient& client) {
         cout << "\nClient Card:";
@@ -23,21 +23,20 @@ class clsDeleteClientScreen : protected clsScreen
         cout << "\n___________________\n";
 
     }
+
 public:
 
-    static void deleteClient() {
+    static void findClient() {
 
-        if (!clsScreen::CheckAccessRights(clsUser::pDeleteClient)) {
+        if (!clsScreen::CheckAccessRights(clsUser::pFindClient)) {
             return;
         }
 
-        string title = "\tDelete Client Screen";
-
-        clsScreen::_DrawScreenHeader(title);
+        clsScreen::_DrawScreenHeader("\tFind Client Screen");
 
         string accountNumber = "";
 
-        cout << "\nEnter account number to delete: ";
+        cout << "Enter account number to find: ";
         accountNumber = clsInputValidate::ReadString();
 
         while (!clsBankClient::isClientExists(accountNumber)) {
@@ -47,19 +46,10 @@ public:
 
         clsBankClient client = clsBankClient::find(accountNumber);
 
+        cout << "\nClient was found :-)\n";
+
         _printClientCard(client);
 
-        cout << "\nAre you sure you want to delete this client y/n? ";
-
-        char answer;
-        cin >> answer;
-
-        if (answer == 'y' || answer == 'Y') {
-            if (client.Delete())
-                cout << "\nClient deleted successfully :-)\n";
-            _printClientCard(client);
-
-        }
     }
 
 };

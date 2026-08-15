@@ -2,8 +2,8 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "clsString.h"
-#include "clsDate.h"
+#include "Utils/clsString.h"
+#include "Utils/clsDate.h"
 
 class clsInputValidate
 {

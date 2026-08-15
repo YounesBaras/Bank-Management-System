@@ -2,10 +2,10 @@
 
 #include <iostream>
 #include "clsMainScreen.h"
-#include "clsUser.h"
-#include "clsInputValidate.h"
+#include "Core/clsUser.h"
+#include "../Utils/clsInputValidate.h"
 #include "clsScreen.h"
-#include "global.h"
+#include "Core/global.h"
 
 class clsLoginScreen : protected clsScreen
 {

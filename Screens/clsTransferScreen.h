@@ -1,8 +1,8 @@
 #pragma once
 
 #include <iostream>
-#include "clsBankClient.h"
-#include "clsInputValidate.h"
+#include "Core/clsBankClient.h"
+#include "../Utils/clsInputValidate.h"
 #include "clsScreen.h"
 
 class clsTransferScreen : protected clsScreen

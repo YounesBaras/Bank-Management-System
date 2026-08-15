@@ -1,5 +1,5 @@
 #pragma once
 
-#include "clsUser.h"
+#include "Core/clsUser.h"
 
 clsUser currentUser = clsUser::Find("");

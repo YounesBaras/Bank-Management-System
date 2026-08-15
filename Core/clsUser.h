@@ -2,11 +2,11 @@
 #include <iostream>
 #include <string>
 #include "clsPerson.h"
-#include "clsString.h"
-#include "clsDate.h"
+#include "../Utils/clsString.h"
+#include "../Utils/clsDate.h"
 #include <vector>
 #include <fstream>
-#include "clsUtil.h"
+#include "../Utils/clsUtil.h"
 
 using namespace std;
 class clsUser : public clsPerson
@@ -79,7 +79,7 @@ private:
         vector <clsUser> vUsers;
 
         fstream MyFile;
-        MyFile.open("Users.txt", ios::in);//read Mode
+        MyFile.open("Data/users.txt", ios::in);//read Mode
 
         if (MyFile.is_open())
         {
@@ -106,7 +106,7 @@ private:
     static void _SaveUsersDataToFile(vector <clsUser> vUsers)
     {
         fstream MyFile;
-        MyFile.open("Users.txt", ios::out);//overwrite
+        MyFile.open("Data/users.txt", ios::out);//overwrite
 
         string DataLine;
 
@@ -159,7 +159,7 @@ private:
     void _AddDataLineToFile(string  stDataLine)
     {
         fstream MyFile;
-        MyFile.open("Users.txt", ios::out | ios::app);
+        MyFile.open("Data/users.txt", ios::out | ios::app);
 
         if (MyFile.is_open())
         {
@@ -258,7 +258,7 @@ public:
     static clsUser Find(string UserName)
     {
         fstream MyFile;
-        MyFile.open("Users.txt", ios::in);//read Mode
+        MyFile.open("Data/users.txt", ios::in);//read Mode
 
         if (MyFile.is_open())
         {
@@ -284,7 +284,7 @@ public:
     {
 
         fstream MyFile;
-        MyFile.open("Users.txt", ios::in);//read Mode
+        MyFile.open("Data/users.txt", ios::in);//read Mode
 
         if (MyFile.is_open())
         {
@@ -400,7 +400,7 @@ public:
 
     void saveLogs() {
         fstream file;
-        file.open("loginRegister.txt", ios::out | ios::app);
+        file.open("Data/loginRegister.txt", ios::out | ios::app);
 
         if (file.is_open()) {
             string line = _prepareLogInRecord();
@@ -409,12 +409,12 @@ public:
             file.close();
         }
         else
-            cout << "\n\nERROR: FAILED TO OPEN \"loginRegister.txt\"\n\n";
+            cout << "\n\nERROR: FAILED TO OPEN \"Data/loginRegister.txt\"\n\n";
     }
 
     static vector <stLoginRegisterRecord> getLoginRegisterList() {
         fstream file;
-        file.open("loginRegister.txt", ios::in);
+        file.open("Data/loginRegister.txt", ios::in);
 
         if (file.is_open()) {
             vector <stLoginRegisterRecord> vLoginRegisterList;

@@ -2,8 +2,8 @@
 
 #include <iostream>
 #include <iomanip>
-#include "clsBankClient.h"
-#include "clsUtil.h"
+#include "Core/clsBankClient.h"
+#include "../Utils/clsUtil.h"
 #include "clsScreen.h"
 
 class clsTotalBalancesScreen : protected clsScreen
@@ -20,7 +20,7 @@ class clsTotalBalancesScreen : protected clsScreen
 public:
 
     static void showTotalBalances() {
-        vector <clsBankClient> vClients = clsBankClient::GetClientsList();
+        vector <clsBankClient> vClients = clsBankClient::getClientsList();
 
         string subtitle = "\t    (" + to_string(vClients.size()) + ") Client(s)";
 

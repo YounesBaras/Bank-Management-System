@@ -2,8 +2,8 @@
 
 #include <iostream>
 #include <vector>
-#include "clsUser.h"
-#include "clsString.h"
+#include "Core/clsUser.h"
+#include "Utils/clsString.h"
 #include "clsScreen.h"
 #include <iomanip>
 

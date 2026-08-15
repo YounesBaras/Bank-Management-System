@@ -2,9 +2,9 @@
 
 #include <iostream>
 #include <iomanip>
-#include "clsBankClient.h"
+#include "../Core/clsBankClient.h"
 #include "clsScreen.h"
-#include "clsInputValidate.h"
+#include "../Utils/clsInputValidate.h"
 
 using namespace std;
 

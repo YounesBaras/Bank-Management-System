@@ -1,10 +1,10 @@
 #include <iostream>
-#include "clsBankClient.h"
-#include "clsInputValidate.h"
+#include "Core/clsBankClient.h"
+#include "Utils/clsInputValidate.h"
 #include <iomanip>
-#include "clsUtil.h"
-#include "clsLoginScreen.h"
-
+#include "Utils/clsUtil.h"
+#include "Screens/clsLoginScreen.h"
+     
 using namespace std;
 
 int main()

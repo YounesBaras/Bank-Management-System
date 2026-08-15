@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include "clsScreen.h"
-#include "clsBankClient.h"
+#include "Core/clsBankClient.h"
 #include <iomanip>
 
 using namespace std;
@@ -29,7 +29,7 @@ public:
             return;
         }
 
-        vector <clsBankClient> vClients = clsBankClient::GetClientsList();
+        vector <clsBankClient> vClients = clsBankClient::getClientsList();
 
         string title = "\t  Clients list screen";
         string subtitle = "\t  (" + to_string(vClients.size()) + ") Clients";
